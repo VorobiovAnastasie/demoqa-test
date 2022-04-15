@@ -40,16 +40,16 @@ public class HomeWork {
         $("#city").$("input").setValue("Delhi").sendKeys(Keys.TAB);
         $("#submit").click();
         $(".modal-title").shouldHave(Condition.text("Thanks for submitting the form"));
-        $(".table-responsive").$(ByText("Student Name")).parent().shouldHave(text("Harry Potter"));
-        $(".table-responsive").$(ByText("Student Email")).parent().shouldHave(text("harry@potter.com"));
-        $(".table-responsive").$(ByText("Gender")).parent().shouldHave(text("Male"));
-        $(".table-responsive").$(ByText("Mobile")).parent().shouldHave(text("3807645322"));
-        $(".table-responsive").$(ByText("Date of Birth")).parent().shouldHave(text("19 September 1997"));
-        $(".table-responsive").$(ByText("Subjects")).parent().shouldHave(text("English"));
-        $(".table-responsive").$(ByText("Hobbies")).parent().shouldHave(text("Reading"));
-        $(".table-responsive").$(ByText("Picture")).parent().shouldHave(text("Harry_Potter.jpeg"));
-        $(".table-responsive").$(ByText("Address")).parent().shouldHave(text("Nyutona street, building 5, apt 95"));
-        $(".table-responsive").$(ByText("State and City")).parent().shouldHave(text("NCR Delhi"));
+        $(".table-responsive").$(new ByText("Student Name")).parent().shouldHave(Condition.text("Harry Potter"));
+        $(".table-responsive").$(new ByText("Student Email")).parent().shouldHave(Condition.text("harry@potter.com"));
+        $(".table-responsive").$(new ByText("Gender")).parent().shouldHave(Condition.text("Male"));
+        $(".table-responsive").$(new ByText("Mobile")).parent().shouldHave(Condition.text("3807645322"));
+        $(".table-responsive").$(new ByText("Date of Birth")).parent().shouldHave(Condition.text("19 September, 1997"));
+        $(".table-responsive").$(new ByText("Subjects")).parent().shouldHave(Condition.text("English"));
+        $(".table-responsive").$(new ByText("Hobbies")).parent().shouldHave(Condition.text("Reading"));
+        $(".table-responsive").$(new ByText("Picture")).parent().shouldHave(Condition.text("Harry_Potter.jpeg"));
+        $(".table-responsive").$(new ByText("Address")).parent().shouldHave(Condition.text("Nyutona street, building 5, apt 95"));
+        $(".table-responsive").$(new ByText("State and City")).parent().shouldHave(Condition.text("NCR Delhi"));
     }
 
 
