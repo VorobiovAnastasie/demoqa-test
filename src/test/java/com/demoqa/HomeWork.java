@@ -44,7 +44,7 @@ public class HomeWork {
         $(".table-responsive").$(new ByText("Student Email")).parent().shouldHave(Condition.text("harry@potter.com"));
         $(".table-responsive").$(new ByText("Gender")).parent().shouldHave(Condition.text("Male"));
         $(".table-responsive").$(new ByText("Mobile")).parent().shouldHave(Condition.text("3807645322"));
-        $(".table-responsive").$(new ByText("Date of Birth")).parent().shouldHave(Condition.text("19 September, 1997"));
+        $(".table-responsive").$(new ByText("Date of Birth")).parent().shouldHave(Condition.text("19 September,1997"));
         $(".table-responsive").$(new ByText("Subjects")).parent().shouldHave(Condition.text("English"));
         $(".table-responsive").$(new ByText("Hobbies")).parent().shouldHave(Condition.text("Reading"));
         $(".table-responsive").$(new ByText("Picture")).parent().shouldHave(Condition.text("Harry_Potter.jpeg"));
