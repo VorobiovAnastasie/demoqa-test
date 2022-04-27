@@ -3,8 +3,6 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 import components.CalendarComponent;
 
-import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -62,12 +60,12 @@ public  class RegistrationFormPage {
     }
 
     public RegistrationFormPage hobbiesInput(String value) {
-        $(byText("Reading")).click();
+        $("#hobbiesWrapper").$(byText(value)).click();
         return this;
     }
 
     public RegistrationFormPage uploadPicture(String value) {
-        $("#uploadPicture").uploadFile(new File("src/test/resources/Harry_Potter.jpeg"));
+        $("#uploadPicture").uploadFromClasspath(value);
         return this;
     }
 
@@ -76,11 +74,11 @@ public  class RegistrationFormPage {
         return this;
     }
     public RegistrationFormPage selectState(String value) {
-        $("#react-select-3-input").setValue("NCR").pressEnter();
+        $("#react-select-3-input").setValue(value).pressEnter();
         return this;
     }
     public RegistrationFormPage selectCity(String value) {
-        $("#react-select-4-input").setValue("Delhi").pressEnter();
+        $("#react-select-4-input").setValue(value).pressEnter();
         return this;
     }
 
