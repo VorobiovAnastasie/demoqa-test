@@ -37,8 +37,8 @@ public class HomeWorkTestData {
                 uploadPicture = "Harry_Potter.jpeg",
                 userAddress = faker.harryPotter().location(),
                 selectState = "NCR",
-                selectCity = "Delhi";
-        String[] genderWrapper = new String[] {"Male", "Female", "Other"};
+                selectCity = "Delhi",
+                genderWrapper = "Male";
 
 
         String expectedFullName = format("%s %s", firstName, lastName);
@@ -49,7 +49,7 @@ public class HomeWorkTestData {
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setEmail(email)
-                .setGender(genderWrapper[0])
+                .setGender(genderWrapper)
                 .setUserNumber(userNumber)
                 .setBirthDate(day, month, year)
                 .subjectsInput(subject)
@@ -61,7 +61,7 @@ public class HomeWorkTestData {
                 .submit()
                 .checkResult("Student Name", expectedFullName)
                 .checkResult("Student Email", email)
-                .checkResult("Gender", genderWrapper[0])
+                .checkResult("Gender", genderWrapper)
                 .checkResult("Mobile", userNumber)
                 .checkResult("Date of Birth", expectedDateOfBirth)
                 .checkResult("Subjects", subject)
