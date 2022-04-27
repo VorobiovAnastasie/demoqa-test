@@ -73,12 +73,14 @@ public  class RegistrationFormPage {
         $("#currentAddress").setValue(value);
         return this;
     }
-    public RegistrationFormPage selectState(String value) {
-        $("#react-select-3-input").setValue(value).pressEnter();
+    public RegistrationFormPage selectState(String state) {
+        $("#state").click();
+        $(byText(state)).click();
         return this;
     }
-    public RegistrationFormPage selectCity(String value) {
-        $("#react-select-4-input").setValue(value).pressEnter();
+    public RegistrationFormPage selectCity(String city) {
+        $("#city").click();
+        $(byText(city)).click();
         return this;
     }
 
